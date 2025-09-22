@@ -1,6 +1,6 @@
-# GitHub Copilot Tutorial - Ejemplos en C#, Python y Java
+# GitHub Copilot Tutorial - Ejemplos en C#, Python, Java, JavaScript, TypeScript y Rust
 
-Este repositorio contiene ejemplos tutoriales para aprender a usar GitHub Copilot en tres lenguajes de programación populares: C#, Python y Java.
+Este repositorio contiene ejemplos tutoriales para aprender a usar GitHub Copilot en seis lenguajes de programación populares: C#, Python, Java, JavaScript, TypeScript y Rust.
 
 ## 📋 Contenido
 
@@ -10,6 +10,9 @@ Este repositorio contiene ejemplos tutoriales para aprender a usar GitHub Copilo
   - [C# Examples](./csharp/)
   - [Python Examples](./python/)
   - [Java Examples](./java/)
+  - [JavaScript Examples](./javascript/)
+  - [TypeScript Examples](./typescript/)
+  - [Rust Examples](./rust/)
 - [💡 Tips y mejores prácticas](#-tips-y-mejores-prácticas)
 
 ## 🚀 Introducción a GitHub Copilot
@@ -46,8 +49,30 @@ mb2025/
 ├── csharp/          # Ejemplos en C#
 ├── python/          # Ejemplos en Python
 ├── java/            # Ejemplos en Java
+├── javascript/      # Ejemplos en JavaScript
+├── typescript/      # Ejemplos en TypeScript
+├── rust/            # Ejemplos en Rust
 └── README.md        # Este archivo
 ```
+
+### 🎯 Niveles de dificultad
+
+Cada lenguaje incluye ejemplos en tres niveles:
+
+#### 🟢 Nivel Beginner (Principiante)
+- Sintaxis básica y conceptos fundamentales
+- Ejemplos simples para familiarizarse con Copilot
+- Operaciones básicas y manipulación de datos
+
+#### 🟡 Nivel Medium (Intermedio)  
+- APIs y servicios web
+- Manejo de archivos y bases de datos
+- Patrones de diseño comunes
+
+#### 🔴 Nivel Advanced (Avanzado)
+- Aplicaciones completas full-stack
+- Optimización de rendimiento
+- Arquitecturas complejas y testing avanzado
 
 ## 💡 Tips y mejores prácticas
 
