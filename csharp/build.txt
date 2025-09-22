@@ -1,0 +1,6 @@
+dotnet new console -n CopilotTutorial
+cd CopilotTutorial
+
+# Para compilar y ejecutar:
+# dotnet build
+# dotnet run

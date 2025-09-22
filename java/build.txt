@@ -1,0 +1,6 @@
+# Para compilar y ejecutar:
+javac -d . *.java
+java com.tutorial.copilot.CopilotTutorialMain
+
+# Para crear un proyecto Maven:
+# mvn archetype:generate -DgroupId=com.tutorial.copilot -DartifactId=copilot-tutorial -DarchetypeArtifactId=maven-archetype-quickstart
