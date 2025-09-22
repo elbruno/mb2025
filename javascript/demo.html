@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Copilot Demo - JavaScript Task Manager</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        h1 {
+            text-align: center;
+            padding: 30px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            margin: 0;
+            font-size: 2rem;
+        }
+        .demo-info {
+            padding: 20px;
+            background: #f8fafc;
+            border-bottom: 1px solid #e2e8f0;
+            text-align: center;
+        }
+        .demo-info h2 {
+            color: #4a5568;
+            margin: 0 0 10px 0;
+            font-size: 1.2rem;
+        }
+        .demo-info p {
+            color: #718096;
+            margin: 0;
+            font-size: 0.9rem;
+        }
+        .features {
+            padding: 20px;
+            background: #f0fff4;
+        }
+        .features h3 {
+            color: #2d3748;
+            margin: 0 0 15px 0;
+        }
+        .features ul {
+            margin: 0;
+            padding-left: 20px;
+            color: #4a5568;
+        }
+        .features li {
+            margin-bottom: 8px;
+        }
+        .tech-stack {
+            padding: 20px;
+            background: #fffbeb;
+            border-top: 1px solid #e2e8f0;
+        }
+        .tech-stack h3 {
+            color: #2d3748;
+            margin: 0 0 15px 0;
+        }
+        .tech-badges {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .badge {
+            background: #667eea;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        .btn {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            margin: 20px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #5a67d8;
+        }
+        .center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📋 GitHub Copilot Tutorial - JavaScript</h1>
+        
+        <div class="demo-info">
+            <h2>🎯 Aplicación Demo Completamente Funcional</h2>
+            <p>Este es un ejemplo completo de lo que puedes crear usando GitHub Copilot con JavaScript</p>
+        </div>
+
+        <div class="features">
+            <h3>✨ Funcionalidades Implementadas:</h3>
+            <ul>
+                <li>➕ Añadir nuevas tareas</li>
+                <li>✅ Marcar tareas como completadas</li>
+                <li>🗑️ Eliminar tareas individuales</li>
+                <li>🔍 Filtrar tareas (Todas, Pendientes, Completadas)</li>
+                <li>💾 Persistencia en localStorage</li>
+                <li>📊 Contador de tareas pendientes</li>
+                <li>🧹 Limpiar todas las tareas completadas</li>
+                <li>🔔 Notificaciones en tiempo real</li>
+                <li>📱 Diseño responsivo</li>
+                <li>🎨 Animaciones CSS suaves</li>
+            </ul>
+        </div>
+
+        <div class="tech-stack">
+            <h3>🛠️ Tecnologías Utilizadas:</h3>
+            <div class="tech-badges">
+                <span class="badge">JavaScript ES6+</span>
+                <span class="badge">DOM Manipulation</span>
+                <span class="badge">localStorage API</span>
+                <span class="badge">CSS3 Animations</span>
+                <span class="badge">Responsive Design</span>
+                <span class="badge">Event Handling</span>
+                <span class="badge">Class-based Architecture</span>
+            </div>
+        </div>
+
+        <div class="center">
+            <a href="index.html" class="btn">🚀 Ver Aplicación en Acción</a>
+        </div>
+    </div>
+
+    <script>
+        // Pequeña demostración de interactividad
+        document.querySelector('.btn').addEventListener('click', function(e) {
+            // Crear efecto de partículas al hacer click
+            const rect = this.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const particle = document.createElement('div');
+            particle.style.cssText = `
+                position: absolute;
+                left: ${x}px;
+                top: ${y}px;
+                width: 10px;
+                height: 10px;
+                background: white;
+                border-radius: 50%;
+                pointer-events: none;
+                animation: explode 0.6s ease-out forwards;
+            `;
+            
+            this.style.position = 'relative';
+            this.appendChild(particle);
+            
+            setTimeout(() => {
+                particle.remove();
+            }, 600);
+        });
+
+        // Añadir animación de partículas
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes explode {
+                0% {
+                    transform: scale(1) translate(0, 0);
+                    opacity: 1;
+                }
+                100% {
+                    transform: scale(3) translate(${Math.random() * 40 - 20}px, ${Math.random() * 40 - 20}px);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

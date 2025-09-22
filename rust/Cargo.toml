@@ -1,0 +1,42 @@
+[package]
+name = "copilot-rust-tutorial"
+version = "0.1.0"
+edition = "2021"
+authors = ["GitHub Copilot Tutorial"]
+description = "GitHub Copilot tutorial examples for Rust"
+license = "MIT"
+
+[dependencies]
+clap = { version = "4.3", features = ["derive"] }
+anyhow = "1.0"
+thiserror = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+[dev-dependencies]
+quickcheck = "1.0"
+quickcheck_macros = "1.0"
+
+[[bin]]
+name = "calculator"
+path = "src/calculator.rs"
+
+[[bin]]
+name = "file-processor"
+path = "src/file_processor.rs"
+
+[[bin]]
+name = "web-server"
+path = "src/web_server.rs"
+
+[profile.dev]
+opt-level = 0
+debug = true
+overflow-checks = true
+
+[profile.release]
+opt-level = 3
+debug = false
+lto = true
+codegen-units = 1
+panic = "abort"

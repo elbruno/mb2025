@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tareas - GitHub Copilot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📋 Gestor de Tareas</h1>
+        
+        <!-- Formulario para nueva tarea -->
+        <form id="taskForm" class="task-form">
+            <input type="text" id="taskInput" placeholder="Añadir nueva tarea..." required>
+            <button type="submit">Añadir</button>
+        </form>
+
+        <!-- Filtros -->
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">Todas</button>
+            <button class="filter-btn" data-filter="pending">Pendientes</button>
+            <button class="filter-btn" data-filter="completed">Completadas</button>
+        </div>
+
+        <!-- Contador -->
+        <div class="counter">
+            <span id="taskCounter">0 tareas pendientes</span>
+        </div>
+
+        <!-- Lista de tareas -->
+        <ul id="taskList" class="task-list"></ul>
+
+        <!-- Botón para limpiar completadas -->
+        <button id="clearCompleted" class="clear-btn">Limpiar Completadas</button>
+    </div>
+
+    <script src="dom-manipulation.js"></script>
+</body>
+</html>
